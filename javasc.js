@@ -10,7 +10,8 @@ rect.addEventListener("mousemove",function(d){
             0,
             insiderec);
         gsap.to(rect,{
-            backgroundColor:`rgb(${redcolour},0,0)`
+            backgroundColor:`rgb(${redcolour},0,0)`,
+            // borderColor:`rgb(${redcolour},0,0)`
         })
     }
     else{
@@ -20,8 +21,15 @@ rect.addEventListener("mousemove",function(d){
             255,
             insiderec);
         gsap.to(rect,{
-            backgroundColor:`rgb(0,0,${bluecolour})`
+            backgroundColor:`rgb(0,0,${bluecolour})`,
+            // borderColor:`rgb(0,0,${bluecolour})`
         })
 
     }
 });
+rect.addEventListener("mouseleave", function() {
+            gsap.to(rect, {
+                backgroundColor: "rgba(220, 210, 210, 1)",
+                ease: "power1.out"
+            });
+        });
